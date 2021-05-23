@@ -27,6 +27,11 @@ class Account extends Model
     
     public function getAmountValueAttribute()
     {
-        return $this->amount / $this->decimals;
+        return $this->amount / $this->multiplier;
+    }
+
+    public function getMultiplierAttribute()
+    {
+        return pow(10, $this->decimals);
     }
 }
