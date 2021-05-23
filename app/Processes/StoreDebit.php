@@ -14,11 +14,7 @@ class StoreDebit
             'reason_id' => $attributes['reason_id']
         ]);
 
-        $account->transactions()->save($debit);
-        
-        $account->amount += $debit->amount;
-
-        $account->save();
+        (new StoreTransaction)($account, $debit);
 
         return $debit;
     }

@@ -3,12 +3,12 @@
 @section('main')
     <div class="row my-4">
         <div class="col">
-            <a class="btn btn-outline-primary" href="{{ route('accounts.index') }}">
+            <a class="btn btn-outline-primary btn-sm" href="{{ route('accounts.index') }}">
                 <span class="material-icons">
                     arrow_back
                 </span>
             </a>
-            <a class="btn btn-outline-primary" href="{{ route('credit', $account) }}">Credit</a>
+            <a class="btn btn-outline-primary" href="{{ route('credit.create', $account) }}">Credit</a>
             <a class="btn btn-outline-primary" href="{{ route('debit.create', $account) }}">Debit</a>
         </div>
     </div>

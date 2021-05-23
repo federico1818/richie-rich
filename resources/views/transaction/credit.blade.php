@@ -5,5 +5,21 @@
     <div class="col">
         <h1>Credit</h1>
     </div>
+    <div class="row my-4">
+        <div class="col">
+            <form method="POST" action="{{ route('credit.store', $account) }}">
+                @csrf
+                <div class="mb-3">
+                    <label for="amount" class="form-label">Amount</label>
+                    <input type="number" class="form-control" id="amount" name="amount">
+                </div>
+                <div class="mb-3">
+                    <label for="reason_id" class="form-label">Reason</label>
+                    <input type="number" class="form-control" id="reason_id" name="reason_id">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
 </div>
 @endsection

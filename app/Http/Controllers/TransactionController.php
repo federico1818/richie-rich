@@ -39,16 +39,6 @@ class TransactionController extends Controller
         return $request->all();
     }
 
-    public function credit(Request $request)
-    {
-        return $request->all();
-    }
-
-    public function createCredit(Account $account)
-    {
-        return $account;
-    }
-
     /**
      * Display the specified resource.
      *
