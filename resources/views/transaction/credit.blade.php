@@ -10,6 +10,10 @@
             <form method="POST" action="{{ route('credit.store', $account) }}">
                 @csrf
                 <div class="mb-3">
+                    <label for="date" class="form-label">Date</label>
+                    <input type="date" class="form-control" id="date" name="date">
+                </div>
+                <div class="mb-3">
                     <label for="amount" class="form-label">Amount</label>
                     <input type="number" class="form-control" id="amount" name="amount">
                 </div>

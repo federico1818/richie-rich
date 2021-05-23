@@ -11,7 +11,8 @@ class Transaction extends Model
 
     protected $fillable = [
         'amount',
-        'reason_id'
+        'reason_id',
+        'date'
     ];
 
     public function account()
